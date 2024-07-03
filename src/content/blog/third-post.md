@@ -2,6 +2,7 @@
 pubDate: Jul 22 2022
 title: Third post - Updated!
 description: Lorem ipsum dolor sit amet
+heroImage: ../../assets/blog-placeholder-about.jpg
 ---
 ![](../../assets/08dnQFldKWOiCPWLJiEf.jpg)
 
