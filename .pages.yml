@@ -21,3 +21,7 @@ content:
       - name: body
         label: Body
         type: rich-text
+      - name: heroImage
+        label: Preview image
+        type: image
+        description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
