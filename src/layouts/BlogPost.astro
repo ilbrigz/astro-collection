@@ -30,6 +30,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <head>
     <BaseHead title={title} description={description} />
     <style>
+      ::view-transition-group(post) {
+        z-index: 10;
+      }
       @keyframes animNone {
   from {
     z-index:99;
@@ -43,14 +46,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   }
 }
 @keyframes inAnim{
-  from {
-    z-index:1;
-    animation:none;
-  }
-  to {
-    z-index:1;
-    animation:none;
-  }
 }
       main {
         width: calc(100% - 2em);
