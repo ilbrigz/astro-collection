@@ -6,6 +6,21 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 
+const anim = {
+  old: {
+    name: 'animeNone',
+  },
+  new: {
+    name: 'fadeOut',
+  }
+};
+
+const myFade = {
+  forwards: anim,
+  backwards: anim,
+};
+
+
 type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
@@ -15,6 +30,14 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <head>
     <BaseHead title={title} description={description} />
     <style>
+      @keyframes animNone {
+  from {
+    animation:none
+  }
+  to {
+    animation:none
+  }
+}
       main {
         width: calc(100% - 2em);
         max-width: 100%;
@@ -63,7 +86,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
           {
             heroImage && (
               <Image
-                transition:animate="initial"
+                transition:animate={myFade}
                 transition:name={title}
                 height={500}
                 src={heroImage}

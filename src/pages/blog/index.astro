@@ -12,6 +12,20 @@ const posts = (await getCollection('blog'))
   .map((post) => {
     return { ...post };
   });
+
+const anim = {
+  old: {
+    name: 'animeNone',
+  },
+  new: {
+    name: 'fadeOut',
+  },
+};
+
+const myFade = {
+  forwards: anim,
+  backwards: anim,
+};
 ---
 
 <!doctype html>
@@ -99,7 +113,7 @@ const posts = (await getCollection('blog'))
                 <a href={`/blog/${post.slug}/`}>
                   {post.data.heroImage && (
                     <Image
-                      transition:animate="initial"
+                      transition:animate={myFade}
                       transition:name={post.data.title}
                       height={250}
                       src={post.data.heroImage}
