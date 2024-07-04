@@ -11,7 +11,7 @@ const anim = {
     name: 'animeNone',
   },
   new: {
-    name: 'fadeOut',
+    name: 'inAnim',
   }
 };
 
@@ -32,10 +32,20 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <style>
       @keyframes animNone {
   from {
+    z-index:99;
     animation:none
   }
   to {
+    z-index:auto
     animation:none
+  }
+}
+@keyframes inAnim{
+  from {
+    z-index: 99;
+  }
+  to {
+    z-index:auto
   }
 }
       main {
