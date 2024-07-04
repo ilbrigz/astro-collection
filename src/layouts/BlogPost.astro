@@ -33,21 +33,23 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       @keyframes animNone {
   from {
     z-index:99;
-    animation:none
+    animation:none;
+    transform:scale(5);
   }
   to {
     z-index:99;
-    animation:none
+    animation:none;
+    transform:scale(3);
   }
 }
 @keyframes inAnim{
   from {
     z-index:1;
-    animation:none
+    animation:none;
   }
   to {
     z-index:1;
-    animation:none
+    animation:none;
   }
 }
       main {

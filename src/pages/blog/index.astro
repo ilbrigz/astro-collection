@@ -33,6 +33,24 @@ const myFade = {
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
+      @keyframes animNone {
+        from {
+          animation: none;
+        }
+        to {
+          animation: none;
+        }
+      }
+      @keyframes inAnim {
+        from {
+          /* transform: scale(5); */
+          z-index: 99;
+        }
+        to {
+          /* transform: scale(3); */
+          z-index: auto;
+        }
+      }
       main {
         width: 960px;
       }
