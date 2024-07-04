@@ -95,6 +95,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
           {
             heroImage && (
               <Image
+              style={{zIndex:12}}
                 transition:animate={myFade}
                 transition:name={title}
                 height={500}
